@@ -1,0 +1,11 @@
+header{
+    background-color: $couleur_background;
+    text-align: center;
+    height: 15%;
+    display: flex;
+    h1{
+        @include typographie(1.8em,$couleur_cliquable);
+        margin:auto;
+        
+    }
+}

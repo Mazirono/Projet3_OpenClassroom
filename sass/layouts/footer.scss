@@ -1,0 +1,19 @@
+footer{
+    margin: 0;
+    background-color: $couleur_background;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__element
+{
+    @include typographie(1.5em,$couleur_cliquable);
+    &:first-child
+    {
+    margin-left: 4%;
+    }
+    &:nth-child(2)
+    {
+        margin-right: 4%;
+    }
+}
