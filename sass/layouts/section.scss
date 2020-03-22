@@ -1,40 +1,10 @@
-section
-{
-    .section_imgs4menus
-    {
-        @include image_proportions(20%,$margin_4menus) ;
-       
-    }
-    .section_img1menu
-    {
-        display: block;
-        @include image_proportions(30%,auto) ;
-        
-    }
-    h1
-    {
-        @include typographie(1.8em,$couleur_basique);
-        text-align: center;
-    }
 
-    
-    
-}
 
-#btn_prochain{
-    background-color: green;
-    width: 300px;
-    height: 50px;
-    margin: auto;
-    margin-bottom: 3%;
-    border-radius: 10px ;
-     h2{
-        text-align: center;
-        @include typographie(1.8em,$couleur_cliquable);
-        width: 100%;
-        padding-top: 2%;
-    }
-        
-    }
+
+   
+
+
+
+
 
 

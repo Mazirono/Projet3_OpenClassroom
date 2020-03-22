@@ -1,0 +1,19 @@
+.sectionp1234
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.sectionp1234_element
+{
+    &:first-child{
+        text-align: center;
+    }
+}
+.sectionp1234__img1menu
+    {
+        display: block;
+        @include image_proportions(25%,auto) ;
+        
+        
+    }
