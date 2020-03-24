@@ -1,0 +1,33 @@
+@mixin typographie($police_size,$police_couleur)
+   {
+    color: $police_couleur;
+    font-size: $police_size;
+    }
+
+@mixin image_proportions($width_img,$margin_img)
+    {
+        width: $width_img;
+        margin: $margin_img;
+    }
+
+@mixin taille_element($width,$heigth,$margin)
+{
+    width: $width;
+    height: $heigth;
+    margin: $margin;
+}
+/*
+@mixin 
+*/
+@mixin soulignement_img1234($border-bottom,$width,$position,$top,$left,$opacity)
+{
+    border-bottom: $border-bottom;
+    width: $width;
+    position: $position;
+    top: $top;
+    left: $left;
+    opacity: $opacity;
+}
+
+    
+
