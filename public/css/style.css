@@ -1,18 +1,23 @@
+/*
+@mixin 
+*/
 html {
+  width: 100%;
   height: 100%;
+  margin: 0;
 }
 
 body {
+  width: 100%;
   height: 100%;
-  min-height: 100%;
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
 }
 
 header {
   background-color: #2E7D32;
-  text-align: center;
+  width: 100%;
   height: 15%;
+  margin: 0;
   display: flex;
 }
 header h1 {
@@ -25,6 +30,8 @@ footer {
   position: absolute;
   bottom: 0;
   width: 100%;
+  height: 10%;
+  margin: 0;
   background-color: #2E7D32;
   display: flex;
   justify-content: space-between;
@@ -86,26 +93,113 @@ footer h2 {
 .sectionp1234 {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  height: 75%;
+  margin: 0%;
 }
-
-.sectionp1234_element:first-child {
+.sectionp1234 > .sectionp1234_element:first-child {
   text-align: center;
+  height: 10%;
+}
+.sectionp1234 > .sectionp1234_element h1 {
+  padding-top: 0.7%;
+  margin: 0;
+}
+.sectionp1234 > .sectionp1234_element:nth-child(2) {
+  height: 85%;
+  width: 30%;
+  margin: 0 auto 2% auto;
 }
 
-.sectionp1234__img1menu {
+.conteneur_image1234, .imgmenu1234 {
   display: block;
-  width: 25%;
+  width: 100%;
   margin: auto;
+  height: 100%;
 }
 
+#toggle2:hover ~ .Entree__element {
+  opacity: 1;
+}
+
+.imgmenu1234 label {
+  border: 1px red solid;
+  position: absolute;
+  top: 35%;
+  width: 30%;
+  height: 17.5%;
+  left: 34.8%;
+}
+
+.visually-hidden {
+  position: absolute;
+  left: -100vw;
+  /* Note, you may want to position the checkbox over top the label and set the opacity to zero instead. It can be better for accessibilty on some touch devices for discoverability. */
+}
+
+/*Page de Menu 1 */
+.Entree__element:nth-child(2) {
+  visibility: hidden;
+}
+.Entree__element:nth-child(4) {
+  border-bottom: 1px black solid;
+  width: 30%;
+  position: absolute;
+  top: 41%;
+  left: 35%;
+  opacity: 1;
+}
+.Entree__element:nth-child(5) {
+  border-bottom: 1px black solid;
+  width: 30%;
+  position: absolute;
+  top: 43.4%;
+  left: 35%;
+  opacity: 1;
+}
+.Entree__element:nth-child(6) {
+  border-bottom: 1px black solid;
+  width: 30%;
+  position: absolute;
+  top: 46.2%;
+  left: 35%;
+  opacity: 1;
+}
+.Entree__element:nth-child(7) {
+  border-bottom: 1px black solid;
+  width: 30%;
+  position: absolute;
+  top: 48.7%;
+  left: 35%;
+  opacity: 1;
+}
+
+/*
+.Entree_element:nth-child(2),.Entree_element:nth-child(3)
+{
+    width: 100%;
+    border-bottom: 1px black solid;
+    height: 7%;
+    margin-top: 5%;
+}
+
+*/
 .sectionpindex {
+  width: 100%;
+  height: 68.8%;
+  margin: 2% 0% 0% 0%;
   display: flex;
   flex-wrap: wrap;
-  height: 68.8%;
-  margin-top: 2%;
+  justify-content: space-between;
 }
-.sectionpindex .sectionpindex__element {
-  height: 40%;
+.sectionpindex label {
+  padding: 1.5vh 2%;
+  border-radius: 0.5rem;
+  background-color: #2E7D32;
+}
+.sectionpindex label span {
+  color: #FBC02D;
+  font-size: 1.8em;
 }
 @media screen and (max-width: 600px) {
   .sectionpindex .sectionpindex__element {
@@ -118,61 +212,70 @@ footer h2 {
   }
 }
 .sectionpindex .sectionpindex__element:first-child, .sectionpindex .sectionpindex__element:nth-child(3) {
-  margin-left: 30.5%;
+  width: 15%;
+  height: 35%;
+  margin: 0% 0% 0% 32%;
 }
 .sectionpindex .sectionpindex__element:nth-child(2), .sectionpindex .sectionpindex__element:nth-child(4) {
-  margin-right: 30.5%;
-  margin-top: 2%;
+  width: 15%;
+  height: 35%;
+  margin: 0% auto 0% 6%;
 }
-.sectionpindex h1 {
-  color: black;
-  font-size: 1.8em;
-  text-align: center;
+.sectionpindex .sectionpindex__element:nth-child(3), .sectionpindex .sectionpindex__element:nth-child(4) {
+  margin-top: 0;
+  align-self: flex-end;
+}
+.sectionpindex .sectionpindex__element:nth-child(5) {
+  align-self: flex-end;
+  width: 100%;
 }
 
 .sectionpindex__imgs4menus {
+  /*
+  max-width:100% ;
+  max-height:100% ;
+  */
   width: 100%;
-  margin: 0% 0% 0% 0%;
-  max-width: 100%;
-  max-height: 100%;
+  height: 100%;
+  margin: 0%;
   transition: 0.8s ease-in-out;
 }
 
 .sectionpindex__imgs4menus-zoom {
   overflow: hidden;
   margin: 0 auto;
-  font-size: 0;
+  /*
+  font-size: 0; 
+  */
 }
 .sectionpindex__imgs4menus-zoom:hover img {
-  transform: scale(1.35);
+  transform: scale(1.42);
   opacity: 80%;
 }
 
-#btn_prochain {
-  background-color: green;
-  width: 300px;
-  height: 50px;
-  margin: auto;
-  margin-bottom: 3%;
-  border-radius: 10px;
+#toggle:checked ~ div#wave {
+  display: inline-block;
 }
-#btn_prochain h2 {
-  color: #FBC02D;
-  font-size: 1.8em;
-  width: 100%;
-  margin: 0;
-  text-align: center;
-  padding-top: 2%;
+#toggle:checked ~ label span {
+  opacity: 0;
 }
 
-html, body {
-  margin: 0;
-  padding: 0;
+/*
+.visually-hidden {
+    position: absolute;
+    left: -100vw;
+
+}
+*/
+#btn_prochain {
+  text-align: center;
 }
 
 div#wave {
-  margin-top: 50vh;
-  text-align: center;
+  top: 84.5%;
+  left: 48.3%;
+  position: absolute;
+  display: none;
 }
 div#wave .dot {
   display: inline-block;
@@ -188,6 +291,11 @@ div#wave .dot:nth-child(2) {
 }
 div#wave .dot:nth-child(3) {
   animation-delay: -0.9s;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
 }
 
 @keyframes wave {
@@ -217,11 +325,58 @@ div#wave .dot:nth-child(3) {
   }
   */
 }
-#btn_prochain2 a {
-  color: blue;
+
+/* Test 2 */
+/*
+div#wave {
+
+
+    top : 47.3%;
+    left: 47.3%;
+    position: absolute;
+    display: none;
+    .dot {
+
+        display: inline-block;
+        width:12px;
+        height:12px;
+        border-radius:50%;
+        margin-right:3px;
+        background:$couleur_cliquable;
+        animation: wave 1.4s linear infinite;
+
+        &:nth-child(2) {
+            animation-delay: -1.1s;
+        }
+
+        &:nth-child(3) {
+            animation-delay: -0.9s;
+        }
+    }
 }
-#btn_prochain2 a:active {
-  color: green;
+*/
+/*
+#toggle:checked ~ div#wave
+{
+    display: inline-block;
 }
+
+#toggle:checked ~ label span
+{
+    opacity: 0;
+}
+label {
+    background: #A5D6A7;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+}
+
+.visually-hidden {
+    position: absolute;
+    left: -100vw;
+
+}
+
+*/
 
 /*# sourceMappingURL=style.css.map */

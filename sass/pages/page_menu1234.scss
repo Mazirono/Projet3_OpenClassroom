@@ -1,19 +1,104 @@
+
 .sectionp1234
 {
     display: flex;
     flex-direction: column;
+    @include taille_element(100%,75%,0%);
+
+    > .sectionp1234_element
+    {
+        &:first-child{
+            text-align: center;
+            height: 10%;
+        }
+            h1
+            {
+                padding-top: 0.7%;
+                margin: 0;
+            }
+        &:nth-child(2)
+        {
+            height: 85%;
+            width: 30%;
+            margin: 0 auto 2% auto;
+        }
+    
+    }
+    
 }
 
-.sectionp1234_element
-{
-    &:first-child{
-        text-align: center;
-    }
-}
-.sectionp1234__img1menu
+
+.conteneur_image1234 ,.imgmenu1234
     {
         display: block;
-        @include image_proportions(25%,auto) ;
-        
-        
+        @include image_proportions(100%,auto) ;
+        height:100%;
     }
+
+
+#toggle2:hover ~ .Entree__element
+{
+    opacity: 1;
+}
+
+
+.imgmenu1234 label {
+    border: 1px red solid;
+    position: absolute;
+    top: 35%;
+    width: 30%;
+    height: 17.5%;
+    left: 34.8%;
+    
+    
+}
+    
+    
+    
+
+
+.visually-hidden {
+    position: absolute;
+    left: -100vw;
+    
+    /* Note, you may want to position the checkbox over top the label and set the opacity to zero instead. It can be better for accessibilty on some touch devices for discoverability. */
+}
+
+
+/*Page de Menu 1 */
+.Entree__element
+{   
+    &:nth-child(2)
+    {
+        visibility: hidden;
+    }
+    &:nth-child(4)
+    {
+        @include soulignement_img1234(1px black solid,30%,absolute,41%,35%,1) 
+    }
+
+    &:nth-child(5)
+    {
+        @include soulignement_img1234(1px black solid,30%,absolute,43.4%,35%,1) 
+    }
+
+    &:nth-child(6)
+    {
+        @include soulignement_img1234(1px black solid,30%,absolute,46.2%,35%,1) 
+    }
+    &:nth-child(7)
+    {
+        @include soulignement_img1234(1px black solid,30%,absolute,48.7%,35%,1) 
+    }
+}
+
+/*
+.Entree_element:nth-child(2),.Entree_element:nth-child(3)
+{
+    width: 100%;
+    border-bottom: 1px black solid;
+    height: 7%;
+    margin-top: 5%;
+}
+
+*/

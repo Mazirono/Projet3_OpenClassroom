@@ -1,7 +1,7 @@
 footer{
     position: absolute;
     bottom: 0;
-    width: 100%;
+    @include taille_element(100%,10%,0);
     background-color: $couleur_background;
     display: flex;
     justify-content: space-between;
