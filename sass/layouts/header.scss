@@ -1,9 +1,16 @@
 header{
     background-color: $couleur_background;
-    @include taille_element(100%,15%,0);
+    
     display: flex;
+    @media (min-width: 600px){
+        @include taille_element(100%,15%,0);
+    }
+    @media (max-width: 600px){
+        @include taille_element(100%,10%,0);
+    }
     h1{
         @include typographie(1.8em,$couleur_cliquable);
         margin:auto;
+        font-family: "Gill Sans", sans-serif;
     }
 }

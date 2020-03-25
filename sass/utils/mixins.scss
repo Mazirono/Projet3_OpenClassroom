@@ -19,15 +19,23 @@
 /*
 @mixin 
 */
-@mixin soulignement_img1234($border-bottom,$width,$position,$top,$left,$opacity)
+@mixin conteneur_soulignement($top,$height)
 {
-    border-bottom: $border-bottom;
-    width: $width;
-    position: $position;
+    
+    position: absolute;
     top: $top;
-    left: $left;
-    opacity: $opacity;
+    width: 30%;
+    height: $height;
+    left: 35%;
 }
 
-    
+@mixin soulignement_img1234($top)
+{
+    border-bottom: 1px black solid;
+    width: 30%;
+    position: absolute;
+    top: $top;
+    left: 35%;
+    opacity: 1;
+}
 

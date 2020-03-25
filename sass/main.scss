@@ -2,7 +2,7 @@
 
 @import "./utils/variables.scss";
 @import "./utils/mixins.scss";
-@import "./utils/functions.scss";
+
 
 @import "./base/body.scss";
 
@@ -10,7 +10,11 @@
 @import "./layouts/section.scss";
 @import "./layouts/footer.scss";
 
-@import "./pages/page_menu1234.scss";
+
+
 @import "./pages/page_index.scss";
-@import "./pages/test.scss";
+@import "./pages/responsive-page_index.scss";
+@import "./pages/page_menu1234.scss";
+@import "./pages/responsive-page_menu1234.scss";
+
 

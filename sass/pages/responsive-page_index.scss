@@ -1,0 +1,38 @@
+.sectionpindex{
+    @media (max-width: 600px){
+        @include taille_element(100%,68.8%,6% 0% 0% 0%);
+    }
+    
+    .sectionpindex__element
+        {
+            
+            @media (max-width: 600px) {
+                &:first-child
+                {
+                    @include taille_element(40%,42%,3% 0% 0% 8%);
+                        
+                }
+                &:nth-child(2)
+                {
+                    @include taille_element(40%,42%,3% 6% 0% 0%);
+                        
+                }
+                &:nth-child(3)
+                {
+                    @include taille_element(40%,42%,3% 0% 3% 8%);
+            
+                }
+                &:nth-child(4)
+                {
+                    @include taille_element(40%,42%,3% 6% 3% 0%);
+                }
+
+                &:nth-child(5)
+                {
+                    margin-bottom: 0;
+                    height: 5%;
+                }
+            }
+            
+        }
+    }

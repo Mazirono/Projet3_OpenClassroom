@@ -1,0 +1,13 @@
+.sectionp1234{
+    @media (max-width: 600px){
+        @include taille_element(100%,68.8%,6% 0% 0% 0%);
+    }
+    .sectionp1234_element{
+        @media (max-width: 600px) {
+            &:nth-child(2)
+            {
+                @include taille_element(80%,85%,8% auto 2% auto)
+            }
+        }
+    }
+}

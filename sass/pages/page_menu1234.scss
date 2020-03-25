@@ -1,9 +1,11 @@
 
 .sectionp1234
 {
-    display: flex;
+    
     flex-direction: column;
-    @include taille_element(100%,75%,0%);
+    @media (min-width: 600px){
+        @include taille_element(100%,75%,0%);
+    }
 
     > .sectionp1234_element
     {
@@ -16,11 +18,11 @@
                 padding-top: 0.7%;
                 margin: 0;
             }
-        &:nth-child(2)
-        {
-            height: 85%;
-            width: 30%;
-            margin: 0 auto 2% auto;
+        @media (min-width: 600px) {
+            &:nth-child(2)
+            {
+                @include taille_element(30%,85%,0 auto 2% auto)
+            }
         }
     
     }
@@ -33,72 +35,80 @@
         display: block;
         @include image_proportions(100%,auto) ;
         height:100%;
+        
     }
 
 
-#toggle2:hover ~ .Entree__element
+
+
+
+
+
+
+#Entree:hover 
 {
-    opacity: 1;
+    opacity: 0;
 }
 
 
-.imgmenu1234 label {
-    border: 1px red solid;
-    position: absolute;
-    top: 35%;
-    width: 30%;
-    height: 17.5%;
-    left: 34.8%;
-    
-    
-}
-    
-    
-    
-
-
-.visually-hidden {
-    position: absolute;
-    left: -100vw;
-    
-    /* Note, you may want to position the checkbox over top the label and set the opacity to zero instead. It can be better for accessibilty on some touch devices for discoverability. */
-}
 
 
 /*Page de Menu 1 */
-.Entree__element
-{   
+
+.conteneur_image1234{
+    #Entree {
+    border: 1px red solid;
+    @include conteneur_soulignement(35%,15%);
+    }
+    #Plat {
+        border: 1px purple solid;
+        @include conteneur_soulignement(50%,15%);
+        }
+    
+    
+}
+#Entree .Entree__element-menu1
+{  
+    &:nth-child(1)
+    {
+        @include soulignement_img1234(41%) ;
+        
+    }
+
     &:nth-child(2)
     {
-        visibility: hidden;
+        @include soulignement_img1234(43.4%) ;
+    }
+
+    &:nth-child(3)
+    {
+        @include soulignement_img1234(46.2%) ;
     }
     &:nth-child(4)
     {
-        @include soulignement_img1234(1px black solid,30%,absolute,41%,35%,1) 
-    }
-
-    &:nth-child(5)
-    {
-        @include soulignement_img1234(1px black solid,30%,absolute,43.4%,35%,1) 
-    }
-
-    &:nth-child(6)
-    {
-        @include soulignement_img1234(1px black solid,30%,absolute,46.2%,35%,1) 
-    }
-    &:nth-child(7)
-    {
-        @include soulignement_img1234(1px black solid,30%,absolute,48.7%,35%,1) 
+        @include soulignement_img1234(48.7%) ;
     }
 }
 
-/*
-.Entree_element:nth-child(2),.Entree_element:nth-child(3)
-{
-    width: 100%;
-    border-bottom: 1px black solid;
-    height: 7%;
-    margin-top: 5%;
-}
+#Plat .Plat__element-menu1
+{  
+    &:nth-child(1)
+    {
+        @include soulignement_img1234(41%) ;
+        height: 1%;
+    }
 
-*/
+    &:nth-child(2)
+    {
+        @include soulignement_img1234(43.4%) ;
+    }
+
+    &:nth-child(3)
+    {
+        @include soulignement_img1234(46.2%) ;
+    }
+    &:nth-child(4)
+    {
+        @include soulignement_img1234(48.7%) ;
+    }
+}
