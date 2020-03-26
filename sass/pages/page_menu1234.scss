@@ -10,7 +10,7 @@
     > .sectionp1234_element
     {
         &:first-child{
-            text-align: center;
+            margin: auto;
             height: 10%;
         }
             h1
@@ -30,7 +30,7 @@
 }
 
 
-.conteneur_image1234 ,.imgmenu1234
+.conteneur_image1234 
     {
         display: block;
         @include image_proportions(100%,auto) ;
@@ -41,74 +41,63 @@
 
 
 
-
-
-
-
-#Entree:hover 
-{
-    opacity: 0;
-}
-
-
-
-
 /*Page de Menu 1 */
 
 .conteneur_image1234{
     #Entree {
-    border: 1px red solid;
-    @include conteneur_soulignement(35%,15%);
+        opacity: 0;
+        @include conteneur_soulignement(35%,15%);
     }
     #Plat {
-        border: 1px purple solid;
+        opacity: 0;
         @include conteneur_soulignement(50%,15%);
         }
-    
+    #Dessert
+        {
+            opacity: 0;
+            @include conteneur_soulignement(65%,15%);
+        }
+        
     
 }
+
 #Entree .Entree__element-menu1
 {  
-    &:nth-child(1)
-    {
-        @include soulignement_img1234(41%) ;
-        
+    @media (min-width: 600px) {
+        &:first-child
+        {
+            @include soulignement_img1234(19%,40%,20%) ;
+        }
     }
-
-    &:nth-child(2)
-    {
-        @include soulignement_img1234(43.4%) ;
-    }
-
-    &:nth-child(3)
-    {
-        @include soulignement_img1234(46.2%) ;
-    }
-    &:nth-child(4)
-    {
-        @include soulignement_img1234(48.7%) ;
-    }
+       
 }
 
 #Plat .Plat__element-menu1
-{  
-    &:nth-child(1)
-    {
-        @include soulignement_img1234(41%) ;
-        height: 1%;
+{              
+
+    @media (min-width: 600px) {
+        &:first-child
+        {
+            @include soulignement_img1234 (29%,38%,23%) ;
+        }
     }
 
-    &:nth-child(2)
-    {
-        @include soulignement_img1234(43.4%) ;
-    }
-
-    &:nth-child(3)
-    {
-        @include soulignement_img1234(46.2%) ;
-    }
-    &:nth-child(4)
-    {
-        @include soulignement_img1234(48.7%) ;
-    }
 }
+
+#Dessert .Dessert__element-menu1
+{              
+
+    @media (min-width: 600px) {
+        &:first-child
+        {
+            @include soulignement_img1234 (21%,36%,27%) ;
+        }
+    }
+
+}
+
+#Entree:hover,#Plat:hover,#Dessert:hover
+{
+    opacity: 1;
+}
+

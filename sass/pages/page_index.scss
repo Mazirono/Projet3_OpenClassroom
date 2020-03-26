@@ -69,6 +69,7 @@
         */
         @include taille_element(100%,100%,0%);
         transition:  0.8s ease-in-out;
+        filter: blur(4px);
         
     }
 
@@ -83,7 +84,7 @@
     &:hover img
     {
         transform: scale(1.42);
-        opacity: 80%;
+        filter: blur(0);
     
     }
 }
