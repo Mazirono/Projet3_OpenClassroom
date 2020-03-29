@@ -1,12 +1,16 @@
 footer{
-    position: absolute;
-    bottom: 0;
-    @include taille_element(100%,10%,0);
+   
+   position: absolute;
+   bottom: 0;
+    
     background-color: $couleur_background;
     display: flex;
     justify-content: space-between;
-    h2{
-        @include typographie(1.5em,$couleur_cliquable);
+    @media (min-width: 600px){
+        @include taille_element(100%,70px,0);
+        h2{
+            @include typographie(1.5em,$couleur_cliquable);
+        }
     }
     
 }

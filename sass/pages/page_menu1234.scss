@@ -4,7 +4,7 @@
     
     flex-direction: column;
     @media (min-width: 600px){
-        @include taille_element(100%,75%,0%);
+        @include taille_element(100%,73%,0%);
     }
 
     > .sectionp1234_element
@@ -21,7 +21,7 @@
         @media (min-width: 600px) {
             &:nth-child(2)
             {
-                @include taille_element(30%,85%,0 auto 2% auto)
+                @include taille_element(380px,87%,0 auto 2% auto)
             }
         }
     
@@ -32,72 +32,151 @@
 
 .conteneur_image1234 
     {
-        display: block;
-        @include image_proportions(100%,auto) ;
+        
+        @include image_proportions(100%,0) ;
         height:100%;
         
     }
 
+.imgmenu1234
+{
+    width: 100%;
+    height: 100%;
 
+    
+}
+
+
+
+.conteneur_image1234{
+    #Entree ,#Dessert {
+        opacity: 1;
+        @include conteneur_soulignement(81%,25%);
+    }
+    #Plat {
+        opacity: 1;
+        @include conteneur_soulignement(81%,20%);
+        }
+
+    
+}
 
 
 /*Page de Menu 1 */
 
-.conteneur_image1234{
-    #Entree {
-        opacity: 0;
-        @include conteneur_soulignement(35%,15%);
-    }
-    #Plat {
-        opacity: 0;
-        @include conteneur_soulignement(50%,15%);
-        }
-    #Dessert
-        {
-            opacity: 0;
-            @include conteneur_soulignement(65%,15%);
-        }
-        
-    
-}
 
 #Entree .Entree__element-menu1
 {  
-    @media (min-width: 600px) {
-        &:first-child
-        {
-            @include soulignement_img1234(19%,40%,20%) ;
-        }
-    }
+    
+        
+    @include soulignement_img1234(16%,40%,20%) ;
+        
+    
        
 }
 
 #Plat .Plat__element-menu1
 {              
 
-    @media (min-width: 600px) {
-        &:first-child
-        {
-            @include soulignement_img1234 (29%,38%,23%) ;
-        }
-    }
+   
+    @include soulignement_img1234 (22%,38%,23%) ;
+    
+    
 
 }
 
 #Dessert .Dessert__element-menu1
 {              
 
-    @media (min-width: 600px) {
-        &:first-child
-        {
-            @include soulignement_img1234 (21%,36%,27%) ;
-        }
-    }
+    
+        
+    @include soulignement_img1234 (22%,36%,27%) ;
+        
+    
 
 }
+
+/*Page de Menu 2 */
+
+#Entree .Entree__element-menu2
+{  
+    
+        
+    @include soulignement_img1234(27.8%,31.5%,36%) ;
+      
+    
+       
+}
+
+#Plat .Plat__element-menu2
+{              
+
+    @include soulignement_img1234 (19.5%,36.5%,27%) ;
+     
+}
+
+#Dessert .Dessert__element-menu2
+{              
+
+    @include soulignement_img1234 (22%,34%,31%) ;
+       
+}
+
+/*Page de Menu 3 */
+
+#Entree .Entree__element-menu3
+{  
+    
+    @include soulignement_img1234(31.2%,35.5%,29%) ;
+       
+    
+       
+}
+
+#Plat .Plat__element-menu3
+{              
+
+    @include soulignement_img1234 (14.5%,34.5%,30%) ;
+     
+}
+
+#Dessert .Dessert__element-menu3
+{              
+
+    @include soulignement_img1234 (7.5%,38%,25%) ;
+       
+}
+
+/*Page de Menu 4 */
+
+#Entree .Entree__element-menu4
+{  
+
+    @include soulignement_img1234(29.2%,43.5%,12%) ;
+       
+}
+
+#Plat .Plat__element-menu4
+{              
+
+    @include soulignement_img1234 (14.5%,34.5%,30%) ;
+     
+}
+
+#Dessert .Dessert__element-menu4
+{              
+
+    @include soulignement_img1234 (7.5%,38%,25%) ;
+       
+}
+
+
+
+
+/* Declencheur */
+
 
 #Entree:hover,#Plat:hover,#Dessert:hover
 {
-    opacity: 1;
+    opacity: 0;
 }
-
