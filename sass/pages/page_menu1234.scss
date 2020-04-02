@@ -3,7 +3,7 @@
 {
     
     flex-direction: column;
-    @media (min-width: 600px){
+    @media (min-width: 1025px){
         @include taille_element(100%,73%,0%);
     }
 
@@ -18,7 +18,7 @@
                 padding-top: 0.7%;
                 margin: 0;
             }
-        @media (min-width: 600px) {
+        @media (min-width: 1025px) {
             &:nth-child(2)
             {
                 @include taille_element(380px,87%,0 auto 2% auto)

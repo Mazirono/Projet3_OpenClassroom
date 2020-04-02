@@ -6,7 +6,7 @@ footer{
     background-color: $couleur_background;
     display: flex;
     justify-content: space-between;
-    @media (min-width: 600px){
+    @media (min-width: 1025px){
         @include taille_element(100%,70px,0);
         h2{
             @include typographie(1.5em,$couleur_cliquable);

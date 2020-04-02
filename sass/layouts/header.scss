@@ -2,10 +2,10 @@ header{
     background-color: $couleur_background;
     
     display: flex;
-    @media (min-width: 600px){
+    @media (min-width: 1024px){
         @include taille_element(100%,15%,0);
     }
-    @media (max-width: 600px){
+    @media (max-width: 1024px){
         @include taille_element(100%,10%,0);
     }
     h1{

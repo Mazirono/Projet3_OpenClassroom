@@ -1,3 +1,4 @@
+/*Portable*/
 .sectionpindex{
     @media (max-width: 600px){
         @include taille_element(100%,79.4%,1.2% 0% 0% 0%);
@@ -6,7 +7,7 @@
     .sectionpindex__element
         {
             
-            @media (max-width: 600px) {
+            @media (max-width: 1024px) {
                 &:first-child
                 {
                     @include taille_element(40%,auto,2.3% 0% 0% 8%);
@@ -48,6 +49,69 @@ footer
     {  
         h2{
             @include typographie(1.36em,$couleur_cliquable);
+        }
+        &:first-child{
+        margin: auto 0 auto 2%;
+        text-decoration: none;
+        }       
+        &:nth-child(2)
+        {
+            margin: auto 2% auto 0%;
+            text-decoration: none;
+        }
+
+    }
+}
+}
+ /*Tablette */
+ .sectionpindex{
+    @media (min-width: 600px) and (max-width: 1024px){
+        @include taille_element(100%,79.4%,1.2% 0% 0% 0%);
+    }
+    
+    .sectionpindex__element
+        {
+            
+            @media (max-width: 1024px) {
+                &:first-child
+                {
+                    @include taille_element(35%,40%,2.3% 0% 0% 12%);
+                        
+                }
+                &:nth-child(2)
+                {
+                    @include taille_element(35%,40%,2.3% 12% 0% 0%);
+                        
+                }
+                &:nth-child(3)
+                {
+                    @include taille_element(35%,40%,3% 0% 0% 12%);
+            
+                }
+                &:nth-child(4)
+                {
+                    @include taille_element(35%,40%,3% 12% 0% 0%);
+                }
+
+                &:nth-child(5)
+                {
+                    position : relative;
+                    bottom: 6px;
+                    height: 12%;
+                }
+
+            }
+            
+        }
+    }
+ footer
+{
+    @media (min-width: 600px) and (max-width: 1024px) {
+    @include taille_element(100%,10%,0px);
+    .footer__element
+    {  
+        h2{
+            @include typographie(2.4em,$couleur_cliquable);
         }
         &:first-child{
         margin: auto 0 auto 2%;

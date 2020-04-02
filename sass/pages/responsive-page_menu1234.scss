@@ -1,9 +1,10 @@
+/* Portable*/
 .sectionp1234{
-    @media (max-width: 600px){
+    @media (max-width: 1024px){
         @include taille_element(100%,68.8%,6% 0% 0% 0%);
     }
     .sectionp1234_element{
-        @media (max-width: 600px) {
+        @media (max-width: 1024px) {
             &:nth-child(2)
             {
                 @include taille_element(80%,85%,8% auto 2% auto)
@@ -11,3 +12,29 @@
         }
     }
 }
+
+/* Tablette*/
+/*
+footer
+{
+    @media screen and (min-width: 600px) and (max-width: 1024px) {
+    @include taille_element(100%,10%,0px);
+    .footer__element
+    {  
+        h2{
+            @include typographie(1.36em,$couleur_cliquable);
+        }
+        &:first-child{
+        margin: auto 0 auto 2%;
+        text-decoration: none;
+        }       
+        &:nth-child(2)
+        {
+            margin: auto 2% auto 0%;
+            text-decoration: none;
+        }
+
+    }
+}
+}
+*/
