@@ -5,16 +5,18 @@ html {
   width: 100%;
   height: 100%;
   margin: 0;
+  padding: 0;
 }
 
 body {
   width: 100%;
   height: 100%;
   margin: 0;
+  padding: 0;
 }
 
 header {
-  background-color: #009688;
+  background-color: #00838F;
   display: flex;
 }
 @media (min-width: 1024px) {
@@ -31,8 +33,12 @@ header {
     margin: 0;
   }
 }
+header a {
+  margin: auto;
+  text-decoration: none;
+}
 header h1 {
-  color: #FBC02D;
+  color: #FFAB00;
   font-size: 1.8em;
   margin: auto;
   font-family: "Gill Sans", sans-serif;
@@ -48,32 +54,26 @@ section input {
 footer {
   position: absolute;
   bottom: 0;
-  background-color: #009688;
+  background-color: #00838F;
   display: flex;
   justify-content: space-between;
+  width: 100%;
+  height: 65px;
+  margin: 0;
 }
-@media (min-width: 1025px) {
-  footer {
-    width: 100%;
-    height: 70px;
-    margin: 0;
-  }
-  footer h2 {
-    color: #FBC02D;
-    font-size: 1.5em;
-  }
+footer h2 {
+  color: #FFAB00;
+  font-size: 1.5em;
 }
-
-.footer__element:first-child {
+footer > .footer__element:first-child {
   margin-left: 4%;
   text-decoration: none;
 }
-.footer__element:nth-child(2) {
+footer > .footer__element:nth-child(2) {
   margin-right: 4%;
   text-decoration: none;
 }
-
-.footer__element-vibration:hover {
+footer > .footer__element .footer__element-vibration:hover {
   animation: shake 0.5s;
   animation-iteration-count: infinite;
 }
@@ -116,72 +116,58 @@ footer {
 .sectionpindex {
   flex-wrap: wrap;
   justify-content: space-between;
-}
-@media (min-width: 600px) {
-  .sectionpindex {
-    width: 100%;
-    height: 75%;
-    margin: 0% 0% 0% 0%;
-  }
+  align-content: center;
+  width: 100%;
+  height: 68%;
+  margin: 0% 0% 0% 0%;
 }
 .sectionpindex label {
   padding: 1.5vh 2%;
   border-radius: 0.5rem;
-  background-color: #009688;
+  background-color: #00838F;
 }
 .sectionpindex label span {
-  color: #FBC02D;
+  color: #FFAB00;
   font-size: 1.8em;
 }
-@media (min-width: 600px) {
-  .sectionpindex .sectionpindex__element:first-child, .sectionpindex .sectionpindex__element:nth-child(3) {
-    width: 12%;
-    height: 40%;
-    margin: 0% 0% 0% 35%;
-  }
-  .sectionpindex .sectionpindex__element:nth-child(2), .sectionpindex .sectionpindex__element:nth-child(4) {
-    width: 12%;
-    height: 40%;
-    margin: 0% auto 0% 6%;
-  }
-  .sectionpindex .sectionpindex__element:nth-child(1), .sectionpindex .sectionpindex__element:nth-child(2) {
-    margin-top: 1.3%;
-  }
-  .sectionpindex .sectionpindex__element:nth-child(3), .sectionpindex .sectionpindex__element:nth-child(4) {
-    margin-top: 2%;
-    align-self: flex-end;
-  }
-  .sectionpindex .sectionpindex__element:nth-child(5) {
-    position: relative;
-    bottom: 28px;
-    height: 12%;
-  }
+.sectionpindex .sectionpindex__element:first-child, .sectionpindex .sectionpindex__element:nth-child(3) {
+  width: 12%;
+  height: 40%;
+  margin: 0% 0% 0% 35%;
+}
+.sectionpindex .sectionpindex__element:nth-child(2), .sectionpindex .sectionpindex__element:nth-child(4) {
+  width: 12%;
+  height: 40%;
+  margin: 0% auto 0% 6%;
+}
+.sectionpindex .sectionpindex__element:nth-child(1), .sectionpindex .sectionpindex__element:nth-child(2) {
+  margin-top: 5%;
+}
+.sectionpindex .sectionpindex__element:nth-child(3), .sectionpindex .sectionpindex__element:nth-child(4) {
+  margin-top: 2%;
 }
 .sectionpindex .sectionpindex__element:nth-child(5) {
+  margin-top: 1.2%;
   align-self: flex-end;
   width: 100%;
 }
 
 .sectionpindex__imgs4menus {
-  /*
-  max-width:100% ;
-  max-height:100% ;
-  */
   width: 100%;
   height: 100%;
   margin: 0%;
+  filter: blur(0.7px);
+  opacity: 85%;
   transition: 0.8s ease-in-out;
 }
 
 .sectionpindex__imgs4menus-zoom {
   overflow: hidden;
-  margin: 0 auto;
-  /*
-  font-size: 0; 
-  */
 }
 .sectionpindex__imgs4menus-zoom:hover img {
   transform: scale(1.42);
+  opacity: 100%;
+  filter: blur(0px);
 }
 
 #btn_prochain {
@@ -189,7 +175,8 @@ footer {
 }
 
 div#wave {
-  top: 33px;
+  z-index: 1;
+  bottom: 60px;
   position: relative;
   opacity: 0;
 }
@@ -199,7 +186,7 @@ div#wave .dot {
   height: 12px;
   border-radius: 50%;
   margin-right: 3px;
-  background: #FBC02D;
+  background: #FFAB00;
   animation: wave 1.4s linear infinite;
 }
 div#wave .dot:nth-child(2) {
@@ -219,20 +206,21 @@ div#wave .dot:nth-child(3) {
 }
 #toggle:checked ~ div#wave {
   opacity: 1;
+  bottom: 20px;
 }
 #toggle:checked ~ label span {
   opacity: 0;
 }
 
 /*Portable*/
-@media (max-width: 600px) {
+@media (max-device-width: 600px) {
   .sectionpindex {
     width: 100%;
     height: 79.4%;
     margin: 1.2% 0% 0% 0%;
   }
 }
-@media (max-width: 1024px) {
+@media (max-device-width: 600px) {
   .sectionpindex .sectionpindex__element:first-child {
     width: 40%;
     height: auto;
@@ -254,20 +242,18 @@ div#wave .dot:nth-child(3) {
     margin: 3% 6% 0% 0%;
   }
   .sectionpindex .sectionpindex__element:nth-child(5) {
-    position: relative;
-    bottom: 28px;
-    height: 12%;
+    margin-top: 2%;
   }
 }
 
-@media (max-width: 600px) {
+@media (max-device-width: 600px) {
   footer {
     width: 100%;
     height: 10%;
     margin: 0px;
   }
   footer .footer__element h2 {
-    color: #FBC02D;
+    color: #FFAB00;
     font-size: 1.36em;
   }
   footer .footer__element:first-child {
@@ -281,14 +267,14 @@ div#wave .dot:nth-child(3) {
 }
 
 /*Tablette */
-@media (min-width: 600px) and (max-width: 1024px) {
+@media (min-device-width: 600px) and (max-device-width: 1024px) {
   .sectionpindex {
     width: 100%;
     height: 79.4%;
     margin: 1.2% 0% 0% 0%;
   }
 }
-@media (max-width: 1024px) {
+@media (max-device-width: 1024px) {
   .sectionpindex .sectionpindex__element:first-child {
     width: 35%;
     height: 40%;
@@ -310,20 +296,18 @@ div#wave .dot:nth-child(3) {
     margin: 3% 12% 0% 0%;
   }
   .sectionpindex .sectionpindex__element:nth-child(5) {
-    position: relative;
-    bottom: 6px;
-    height: 12%;
+    margin-top: 4%;
   }
 }
 
-@media (min-width: 600px) and (max-width: 1024px) {
+@media (min-device-width: 600px) and (max-device-width: 1024px) {
   footer {
     width: 100%;
     height: 10%;
     margin: 0px;
   }
   footer .footer__element h2 {
-    color: #FBC02D;
+    color: #FFAB00;
     font-size: 2.4em;
   }
   footer .footer__element:first-child {
@@ -338,13 +322,9 @@ div#wave .dot:nth-child(3) {
 
 .sectionp1234 {
   flex-direction: column;
-}
-@media (min-width: 1025px) {
-  .sectionp1234 {
-    width: 100%;
-    height: 73%;
-    margin: 0%;
-  }
+  width: 100%;
+  height: 73%;
+  margin: 0.5% 0 0 0;
 }
 .sectionp1234 > .sectionp1234_element:first-child {
   margin: auto;
@@ -354,70 +334,65 @@ div#wave .dot:nth-child(3) {
   padding-top: 0.7%;
   margin: 0;
 }
-@media (min-width: 1025px) {
-  .sectionp1234 > .sectionp1234_element:nth-child(2) {
-    width: 380px;
-    height: 87%;
-    margin: 0 auto 2% auto;
-  }
+.sectionp1234 > .sectionp1234_element:nth-child(2) {
+  width: 380px;
+  height: 87%;
+  margin: 0 auto 2% auto;
 }
 
 .conteneur_image1234 {
   width: 100%;
-  margin: 0;
+  height: 100%;
+  margin: 0%;
   height: 100%;
 }
-
-.imgmenu1234 {
+.conteneur_image1234 .imgmenu1234 {
   width: 100%;
   height: 100%;
 }
-
 .conteneur_image1234 #Entree, .conteneur_image1234 #Dessert {
-  opacity: 1;
+  opacity: 0;
   position: relative;
   bottom: 81%;
   width: 100%;
   height: 25%;
-  border: 1px solid black;
 }
 .conteneur_image1234 #Plat {
-  opacity: 1;
+  opacity: 0;
   position: relative;
   bottom: 81%;
   width: 100%;
   height: 20%;
-  border: 1px solid black;
 }
 
 /*Page de Menu 1 */
 #Entree .Entree__element-menu1 {
-  border-bottom: 1.5px black solid;
+  border-bottom: 1.6px black solid;
   width: 20%;
   position: relative;
-  top: 16%;
+  top: 18.6%;
   left: 40%;
 }
 
 #Plat .Plat__element-menu1 {
-  border-bottom: 1.5px black solid;
+  border-bottom: 1.6px black solid;
   width: 23%;
   position: relative;
-  top: 22%;
+  top: 25.3%;
   left: 38%;
 }
 
 #Dessert .Dessert__element-menu1 {
-  border-bottom: 1.5px black solid;
+  border-bottom: 1.6px black solid;
   width: 27%;
   position: relative;
-  top: 22%;
+  top: 25.3%;
   left: 36%;
 }
 
 /*Page de Menu 2 */
 #Entree .Entree__element-menu2 {
-  border-bottom: 1.5px black solid;
+  border-bottom: 1.6px black solid;
   width: 36%;
   position: relative;
   top: 27.8%;
@@ -425,7 +400,7 @@ div#wave .dot:nth-child(3) {
 }
 
 #Plat .Plat__element-menu2 {
-  border-bottom: 1.5px black solid;
+  border-bottom: 1.6px black solid;
   width: 27%;
   position: relative;
   top: 19.5%;
@@ -433,24 +408,24 @@ div#wave .dot:nth-child(3) {
 }
 
 #Dessert .Dessert__element-menu2 {
-  border-bottom: 1.5px black solid;
+  border-bottom: 1.6px black solid;
   width: 31%;
   position: relative;
-  top: 22%;
+  top: 24.2%;
   left: 34%;
 }
 
 /*Page de Menu 3 */
 #Entree .Entree__element-menu3 {
-  border-bottom: 1.5px black solid;
+  border-bottom: 1.6px black solid;
   width: 29%;
   position: relative;
-  top: 31.2%;
+  top: 31%;
   left: 35.5%;
 }
 
 #Plat .Plat__element-menu3 {
-  border-bottom: 1.5px black solid;
+  border-bottom: 1.6px black solid;
   width: 30%;
   position: relative;
   top: 14.5%;
@@ -458,52 +433,52 @@ div#wave .dot:nth-child(3) {
 }
 
 #Dessert .Dessert__element-menu3 {
-  border-bottom: 1.5px black solid;
+  border-bottom: 1.6px black solid;
   width: 25%;
   position: relative;
-  top: 7.5%;
+  top: 10.5%;
   left: 38%;
 }
 
 /*Page de Menu 4 */
 #Entree .Entree__element-menu4 {
-  border-bottom: 1.5px black solid;
+  border-bottom: 1.6px black solid;
   width: 12%;
   position: relative;
-  top: 29.2%;
+  top: 29.8%;
   left: 43.5%;
 }
 
 #Plat .Plat__element-menu4 {
-  border-bottom: 1.5px black solid;
-  width: 30%;
+  border-bottom: 1.6px black solid;
+  width: 22%;
   position: relative;
   top: 14.5%;
-  left: 34.5%;
+  left: 39.5%;
 }
 
 #Dessert .Dessert__element-menu4 {
-  border-bottom: 1.5px black solid;
+  border-bottom: 1.6px black solid;
   width: 25%;
   position: relative;
-  top: 7.5%;
+  top: 10.5%;
   left: 38%;
 }
 
 /* Declencheur */
 #Entree:hover, #Plat:hover, #Dessert:hover {
-  opacity: 0;
+  opacity: 1;
 }
 
 /* Portable*/
-@media (max-width: 1024px) {
+@media (max-device-width: 1024px) {
   .sectionp1234 {
     width: 100%;
     height: 68.8%;
     margin: 6% 0% 0% 0%;
   }
 }
-@media (max-width: 1024px) {
+@media (max-device-width: 1024px) {
   .sectionp1234 .sectionp1234_element:nth-child(2) {
     width: 80%;
     height: 85%;
