@@ -1,13 +1,13 @@
 /*Portable*/
 .sectionpindex{
-    @media (max-width: 600px){
+    @media (max-device-width: 600px){
         @include taille_element(100%,79.4%,1.2% 0% 0% 0%);
     }
     
     .sectionpindex__element
         {
             
-            @media (max-width: 1024px) {
+            @media (max-device-width: 600px) {
                 &:first-child
                 {
                     @include taille_element(40%,auto,2.3% 0% 0% 8%);
@@ -30,9 +30,8 @@
 
                 &:nth-child(5)
                 {
-                    position : relative;
-                    bottom: 28px;
-                    height: 12%;
+                   
+                    margin-top: 2%;
                 }
 
             }
@@ -43,7 +42,7 @@
 
 footer
 {
-    @media (max-width: 600px) {
+    @media (max-device-width: 600px) {
     @include taille_element(100%,10%,0px);
     .footer__element
     {  
@@ -65,14 +64,14 @@ footer
 }
  /*Tablette */
  .sectionpindex{
-    @media (min-width: 600px) and (max-width: 1024px){
+    @media (min-device-width: 600px) and (max-device-width: 1024px){
         @include taille_element(100%,79.4%,1.2% 0% 0% 0%);
     }
     
     .sectionpindex__element
         {
             
-            @media (max-width: 1024px) {
+            @media (max-device-width: 1024px) {
                 &:first-child
                 {
                     @include taille_element(35%,40%,2.3% 0% 0% 12%);
@@ -95,9 +94,7 @@ footer
 
                 &:nth-child(5)
                 {
-                    position : relative;
-                    bottom: 6px;
-                    height: 12%;
+                    margin-top: 4%;
                 }
 
             }
@@ -106,7 +103,7 @@ footer
     }
  footer
 {
-    @media (min-width: 600px) and (max-width: 1024px) {
+    @media (min-device-width: 600px) and (max-device-width: 1024px) {
     @include taille_element(100%,10%,0px);
     .footer__element
     {  

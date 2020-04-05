@@ -8,6 +8,10 @@ header{
     @media (max-width: 1024px){
         @include taille_element(100%,10%,0);
     }
+    a{
+        margin : auto ;
+        text-decoration: none;
+    }
     h1{
         @include typographie(1.8em,$couleur_cliquable);
         margin:auto;

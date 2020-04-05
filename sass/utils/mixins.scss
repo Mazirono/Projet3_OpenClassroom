@@ -4,11 +4,7 @@
     font-size: $police_size;
     }
 
-@mixin image_proportions($width_img,$margin_img)
-    {
-        width: $width_img;
-        margin: $margin_img;
-    }
+
 
 @mixin taille_element($width,$heigth,$margin)
 {
@@ -27,12 +23,12 @@
     width: 100%;
     height: $height;
     
-    border: 1px solid black;
+   
 }
 
 @mixin soulignement_img1234($top,$left,$width)
 {
-    border-bottom: 1.5px black solid;
+    border-bottom: 1.6px black solid;
     width:$width ;
     position: relative;
     top: $top;
