@@ -3,18 +3,16 @@
 @import "./utils/variables.scss";
 @import "./utils/mixins.scss";
 
-
 @import "./base/body.scss";
 
 @import "./layouts/header.scss";
 @import "./layouts/section.scss";
 @import "./layouts/footer.scss";
 
-
-
 @import "./pages/page_index.scss";
-@import "./pages/responsive-page_index.scss";
 @import "./pages/page_menu1234.scss";
-@import "./pages/responsive-page_menu1234.scss";
 
-
+@import "./responsive/header-responsive.scss";
+@import "./responsive/footer-responsive.scss";
+@import "./responsive/index-responsive.scss";
+@import "./responsive/page_menu1234-responsive.scss";

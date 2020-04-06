@@ -1,28 +1,31 @@
 footer{
    
-   position: absolute;
-   bottom: 0;
-    
-    background-color: $couleur_background;
     display: flex;
     justify-content: space-between;
-    
+
+    position: absolute;
+    bottom: 0;
+
+    background-color: $couleur_background;
     @include taille_element(100%,65px,0);
-    h2{
-        @include typographie(1.5em,$couleur_cliquable);
-    }
-    
 
     >.footer__element
-    {   &:first-child
+    {   
+        text-decoration: none;
+        h2{
+            @include typographie(1.5em,$couleur_cliquable);
+            text-align: center;
+        }
+        
+        &:first-child
         {
             margin-left: 4%;
-            text-decoration: none;
+            
         }       
         &:nth-child(2)
         {
             margin-right: 4%;
-            text-decoration: none;
+            
         }
 
         .footer__element-vibration
@@ -46,10 +49,9 @@ footer{
                     100% { transform: translate(1px, -2px) rotate(-1deg); }
                         }
             
-                }
             }
+    }
 
-    
 }
 
 

@@ -1,0 +1,47 @@
+
+
+.sectionp1234{
+    /* Tablettes et portables */
+    @media (max-device-width: 1024px){
+        @include taille_element(100%,68.8%,0% 0% 0% 0%);
+    }
+
+    .sectionp1234_element{
+
+        /* Portable */
+
+        @media (max-device-width: 600px) {
+            h1{
+                @include typographie(1.9em,black)
+            }
+            &:nth-child(1)
+            {
+                margin-top: 5%;
+            }
+            &:nth-child(2)
+            {
+                @include taille_element(85%,85%,3% auto 2% auto)
+            }
+           
+        }
+
+        /* Tablette */
+
+        @media (min-device-width: 600px) and (max-device-width: 1024px) {
+
+            h1{
+                @include typographie(3.2em,black)
+            }
+            &:nth-child(1)
+            {
+                margin-top: 2%;
+            }
+            &:nth-child(2)
+            {
+                @include taille_element(73%,95%,2% auto 0 auto)
+            }
+           
+        }
+    }
+}
+
