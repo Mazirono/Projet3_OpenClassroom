@@ -175,18 +175,21 @@ footer > .footer__element .footer__element-vibration:hover {
   text-align: center;
 }
 
-div#wave {
-  bottom: 999px;
-  left: 4px;
-  position: relative;
-}
 div#wave .dot {
   display: inline-block;
   width: 12px;
   height: 12px;
   border-radius: 50%;
+  opacity: 0;
+  position: relative;
   background: #FFBF33;
   animation: wave 1.4s linear infinite;
+}
+@media (min-device-width: 600px) and (max-device-width: 1024px) {
+  div#wave .dot {
+    width: 17px;
+    height: 17px;
+  }
 }
 div#wave .dot:nth-child(2) {
   animation-delay: -1.1s;
@@ -203,9 +206,10 @@ div#wave .dot:nth-child(3) {
     transform: translateY(-15px);
   }
 }
-#toggle:checked ~ div#wave {
-  transition-duration: 0.8s;
+#toggle:checked ~ div#wave .dot {
   bottom: 20px;
+  left: 6px;
+  opacity: 1;
 }
 #toggle:checked ~ label span {
   opacity: 0;
@@ -241,7 +245,7 @@ div#wave .dot:nth-child(3) {
     margin: 3% 6% 0% 0%;
   }
   .sectionpindex .sectionpindex__element:nth-child(5) {
-    margin-top: 2%;
+    margin-top: 6%;
   }
 }
 
@@ -273,7 +277,7 @@ div#wave .dot:nth-child(3) {
     margin: 1.2% 0% 0% 0%;
   }
 }
-@media (max-device-width: 1024px) {
+@media (min-device-width: 600px) and (max-device-width: 1024px) {
   .sectionpindex .sectionpindex__element:first-child {
     width: 35%;
     height: 40%;
@@ -296,6 +300,12 @@ div#wave .dot:nth-child(3) {
   }
   .sectionpindex .sectionpindex__element:nth-child(5) {
     margin-top: 4%;
+  }
+  .sectionpindex .sectionpindex__element label {
+    padding: 2.2vh 3.5%;
+  }
+  .sectionpindex .sectionpindex__element label span {
+    font-size: 2.2em;
   }
 }
 
@@ -343,7 +353,6 @@ div#wave .dot:nth-child(3) {
   width: 100%;
   height: 100%;
   margin: 0%;
-  height: 100%;
 }
 .conteneur_image1234 .imgmenu1234 {
   width: 100%;
@@ -469,46 +478,54 @@ div#wave .dot:nth-child(3) {
   opacity: 1;
 }
 
-/* Portable*/
-@media (max-device-width: 1024px) {
+@media (min-device-width: 600px) and (max-device-width: 1024px) {
+  header h1 {
+    font-size: 3.3em;
+  }
+}
+
+.sectionp1234 {
+  /* Portable */
+}
+@media (max-device-width: 600px) {
   .sectionp1234 {
     width: 100%;
     height: 68.8%;
     margin: 6% 0% 0% 0%;
   }
 }
-@media (max-device-width: 1024px) {
+@media (min-device-width: 600px) and (max-device-width: 1024px) {
+  .sectionp1234 {
+    width: 100%;
+    height: 68.8%;
+    margin: 2% 0% 0% 0%;
+  }
+}
+.sectionp1234 .sectionp1234_element {
+  /* Portable */
+  /* Tablette */
+}
+@media (max-device-width: 600px) {
+  .sectionp1234 .sectionp1234_element h1 {
+    color: black;
+    font-size: 1.9em;
+  }
   .sectionp1234 .sectionp1234_element:nth-child(2) {
-    width: 80%;
+    width: 85%;
     height: 85%;
     margin: 8% auto 2% auto;
   }
 }
-
-/* Tablette*/
-/*
-footer
-{
-    @media screen and (min-width: 600px) and (max-width: 1024px) {
-    @include taille_element(100%,10%,0px);
-    .footer__element
-    {  
-        h2{
-            @include typographie(1.36em,$couleur_cliquable);
-        }
-        &:first-child{
-        margin: auto 0 auto 2%;
-        text-decoration: none;
-        }       
-        &:nth-child(2)
-        {
-            margin: auto 2% auto 0%;
-            text-decoration: none;
-        }
-
-    }
+@media (min-device-width: 600px) and (max-device-width: 1024px) {
+  .sectionp1234 .sectionp1234_element h1 {
+    color: black;
+    font-size: 3.2em;
+  }
+  .sectionp1234 .sectionp1234_element:nth-child(2) {
+    width: 73%;
+    height: 95%;
+    margin: 4% auto 0 auto;
+  }
 }
-}
-*/
 
 /*# sourceMappingURL=style.css.map */
