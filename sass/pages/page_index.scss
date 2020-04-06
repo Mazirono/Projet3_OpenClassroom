@@ -102,10 +102,10 @@
 
 div#wave {
     
-    z-index: 1;
-    bottom: 60px;
+    bottom: 999px;
+    left: 4px;
     position: relative;
-    opacity: 0;
+    
 
     .dot {
         
@@ -113,7 +113,7 @@ div#wave {
         width:12px;
         height:12px;
         border-radius:50%;
-        margin-right:3px;
+        
         background:$couleur_cliquable;
         animation: wave 1.4s linear infinite;
 
@@ -141,11 +141,13 @@ div#wave {
 {
     ~ div#wave
     {
-    opacity: 1;
-    bottom: 20px;
+        
+        transition-duration: 0.8s;
+        bottom: 20px;
     }
     ~ label span
     {
+        
         opacity: 0;
     }
 }
