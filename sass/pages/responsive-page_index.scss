@@ -31,7 +31,7 @@
                 &:nth-child(5)
                 {
                    
-                    margin-top: 2%;
+                    margin-top: 6%;
                 }
 
             }
@@ -63,15 +63,16 @@ footer
 }
 }
  /*Tablette */
- .sectionpindex{
+.sectionpindex{
     @media (min-device-width: 600px) and (max-device-width: 1024px){
         @include taille_element(100%,79.4%,1.2% 0% 0% 0%);
+        
     }
     
     .sectionpindex__element
         {
-            
-            @media (max-device-width: 1024px) {
+          
+            @media (min-device-width: 600px) and (max-device-width: 1024px) {
                 &:first-child
                 {
                     @include taille_element(35%,40%,2.3% 0% 0% 12%);
@@ -96,11 +97,20 @@ footer
                 {
                     margin-top: 4%;
                 }
+               
+                label{
+                    padding: 2.2vh 3.5%;
+                    span{
+                        font-size: 2.2em;
+                    }
+                }
+                
 
             }
             
         }
-    }
+ }
+
  footer
 {
     @media (min-device-width: 600px) and (max-device-width: 1024px) {
