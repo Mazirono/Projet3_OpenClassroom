@@ -13,10 +13,11 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
+  overflow: hidden;
 }
 
 header {
-  background-color: #00838F;
+  background-color: #29602A;
   display: flex;
 }
 @media (min-width: 1024px) {
@@ -38,7 +39,7 @@ header a {
   text-decoration: none;
 }
 header h1 {
-  color: #FFAB00;
+  color: #FFBF33;
   font-size: 1.8em;
   margin: auto;
   font-family: "Gill Sans", sans-serif;
@@ -54,7 +55,7 @@ section input {
 footer {
   position: absolute;
   bottom: 0;
-  background-color: #00838F;
+  background-color: #29602A;
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -62,7 +63,7 @@ footer {
   margin: 0;
 }
 footer h2 {
-  color: #FFAB00;
+  color: #FFBF33;
   font-size: 1.5em;
 }
 footer > .footer__element:first-child {
@@ -124,10 +125,10 @@ footer > .footer__element .footer__element-vibration:hover {
 .sectionpindex label {
   padding: 1.5vh 2%;
   border-radius: 0.5rem;
-  background-color: #00838F;
+  background-color: #29602A;
 }
 .sectionpindex label span {
-  color: #FFAB00;
+  color: #FFBF33;
   font-size: 1.8em;
 }
 .sectionpindex .sectionpindex__element:first-child, .sectionpindex .sectionpindex__element:nth-child(3) {
@@ -175,18 +176,16 @@ footer > .footer__element .footer__element-vibration:hover {
 }
 
 div#wave {
-  z-index: 1;
-  bottom: 60px;
+  bottom: 999px;
+  left: 4px;
   position: relative;
-  opacity: 0;
 }
 div#wave .dot {
   display: inline-block;
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  margin-right: 3px;
-  background: #FFAB00;
+  background: #FFBF33;
   animation: wave 1.4s linear infinite;
 }
 div#wave .dot:nth-child(2) {
@@ -205,7 +204,7 @@ div#wave .dot:nth-child(3) {
   }
 }
 #toggle:checked ~ div#wave {
-  opacity: 1;
+  transition-duration: 0.8s;
   bottom: 20px;
 }
 #toggle:checked ~ label span {
@@ -253,7 +252,7 @@ div#wave .dot:nth-child(3) {
     margin: 0px;
   }
   footer .footer__element h2 {
-    color: #FFAB00;
+    color: #FFBF33;
     font-size: 1.36em;
   }
   footer .footer__element:first-child {
@@ -307,7 +306,7 @@ div#wave .dot:nth-child(3) {
     margin: 0px;
   }
   footer .footer__element h2 {
-    color: #FFAB00;
+    color: #FFBF33;
     font-size: 2.4em;
   }
   footer .footer__element:first-child {
