@@ -9,5 +9,6 @@ html{
 body{
     @include taille_element(100%,100%,0);
     padding: 0;
-    overflow: hidden;
+    
+    
 }

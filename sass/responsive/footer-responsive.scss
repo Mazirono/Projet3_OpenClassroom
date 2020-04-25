@@ -1,8 +1,12 @@
 footer
 {
     /*Tablettes et portables*/
+    
     @media (max-device-width: 1024px) {
-    @include taille_element(100%,10%,0px);
+        
+        @include taille_element(100%,10%,200px 0 0 0);
+        
+    
     }
     
 

@@ -1,7 +1,7 @@
 header{
 
     @media (max-device-width: 1024px){
-    @include taille_element(100%,11%,0);
+        @include taille_element(100%,11%,0);
     }
     
     /*Tablette*/

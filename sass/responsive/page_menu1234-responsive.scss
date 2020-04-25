@@ -1,47 +1,208 @@
 
 
+/* Portables */
+@media (max-device-width: 600px){
 .sectionp1234{
-    /* Tablettes et portables */
-    @media (max-device-width: 1024px){
-        @include taille_element(100%,68.8%,0% 0% 0% 0%);
+    
+        @include taille_element(100%,80.8%,0% 0% 0% 0%);
+    
+    h2{
+        font-size: 0.91em;
     }
-
+    
     .sectionp1234_element{
-
-        /* Portable */
-
-        @media (max-device-width: 600px) {
-            h1{
-                @include typographie(1.9em,black)
-            }
-            &:nth-child(1)
-            {
-                margin-top: 5%;
-            }
-            &:nth-child(2)
-            {
-                @include taille_element(85%,85%,3% auto 2% auto)
-            }
-           
+        &:nth-child(2)
+        {
+        height: 87%;
+        width: 85%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 2%;
         }
-
-        /* Tablette */
-
-        @media (min-device-width: 600px) and (max-device-width: 1024px) {
-
+        #Menu_Haut{
+            height: 14%;
             h1{
-                @include typographie(3.2em,black)
+                margin-top: 7%;
             }
-            &:nth-child(1)
-            {
-                margin-top: 2%;
+        }
+        .Menu_Milieu{
+            height:30%;
+            margin-top: 0;
+            .Milieu_element{
+                
+                &:first-child{
+                    
+                  
+                    .span2{
+                                            
+                        margin-right: 0px;
+                    }
+                    .span1{
+                        margin-left: 0px;
+                    }
+                    .span1:before, .span2:after {
+                        
+                        width: 20px;
+                        
+                       
+                    }
+                }
+                &:nth-child(2),&:nth-child(3),&:nth-child(4),&:nth-child(5){
+                    height: 30%;
+                    p{
+                        font-size: 0.8em;
+                        margin-top: auto;
+                        margin-bottom: auto;
+                        &:nth-child(2){
+                            width: 20%;
+                        }
+                    }
+                }
+                &:nth-child(2){
+                    margin-top: -4%;
+                }
             }
-            &:nth-child(2)
-            {
-                @include taille_element(73%,95%,2% auto 0 auto)
-            }
-           
         }
     }
 }
+#sectionp1
+    {
+        .sectionp1234_element{
+           
+        .Menu_Milieu{
+            margin-top: 3%;
+            background-color: #ffcdd2;
+            &:nth-child(2)
+            {
+                margin-top: 10%;
+            }
+            
+            &:nth-child(3)
+            {
+                margin-top: 19%;
+            }
+            &:nth-child(4)
+            {
+                margin-top: 4%;
+            }
+            .Milieu_element{
+                margin-top: 0;
+            }
+        }
+        #Menu_Bas{
+            background-color: #ffcdd2;
+            height: 20%;
+            .Bas_Element{
+                margin-top: 5%;
+            }
+            h1{
+                margin: auto;
+            }
+        }
+           
+          
+        }
+        
+    }
+}
 
+
+/* Tablette */
+ @media  screen and (min-device-width: 600px) and (max-device-width: 1024px){
+.sectionp1234{
+   
+        @include taille_element(100%,79%,0% 0% 0% 0%);
+    
+    h2{
+        font-size: 0.91em;
+    }
+    
+    .sectionp1234_element{
+        
+        
+        &:first-child{
+            margin-top:20px ;
+            margin-bottom: 40px;
+            h1{
+                font-size: 2.6em;
+            }
+
+        }
+        &:nth-child(2)
+        {
+        height: 82%;
+        width: 72%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top:0px ;
+        }
+        #Menu_Haut{
+            height:15%;
+            margin-top: 0;
+            h1{
+                font-size: 2.7em;
+            }
+        }
+        .Menu_Milieu{
+            height: 28%;
+            .Milieu_element{
+                
+                &:first-child{
+                    
+                    .span1:before, .span2:after {
+                        
+                        width: 70px;
+                        
+                       
+                    }
+                    h2{
+                        font-size: 2em;
+                    }
+                    
+                   
+                }
+                &:nth-child(2),&:nth-child(3),&:nth-child(4),&:nth-child(5){
+                    height: 28%;
+                    p{
+                        margin-top: auto;
+                        margin-bottom: auto;
+                        font-size: 1.33em;
+                       
+                        &:first-child{
+                            width: 81%;
+                        }
+                        &:nth-child(2){
+                            width: 12%;
+                            text-align: right;
+                        }
+                        
+                    }
+                }   
+            }
+        }
+    }
+    
+  
+}
+#sectionp1
+    {
+    .sectionp1234_element{
+        .Menu_Milieu{
+            background-color: #ffcdd2;
+            &:nth-child(3)
+            {
+                margin-top: 12%;
+            }
+        }
+     
+        #Menu_Bas{
+            background-color: #ffcdd2;
+           
+        }
+        
+          
+    }
+        
+    }
+
+}

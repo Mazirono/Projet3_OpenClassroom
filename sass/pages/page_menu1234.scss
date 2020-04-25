@@ -1,173 +1,371 @@
 
-.sectionp1234
+/* Section régle menu 1234 */
+.sectionp1234{
+    display: flex;
+    flex-direction:column ;
+    
+    @include taille_element(480px,550px,0.4% auto 2% auto);
+    
+    .sectionp1234_element{
+        &:nth-child(1){
+            margin: 0 auto 0 auto;
+            height: 32px;
+            h1{
+                margin:0;
+            }
+        }
+        &:nth-child(2){
+            height : 530px;
+        }
+    }
+    #Menu_Haut
+    {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        height: 80px;
+       
+    }
+    .Menu_Milieu{    
+        display: flex;
+        flex-wrap: wrap;
+        height: 130px;
+        .Milieu_element{
+            &:first-child{
+                &:first-child{
+                    
+                    display: flex;
+                    width: 100%;
+                    justify-content: space-between;
+                    
+                }
+                .span1:before, .span2:after {
+                    
+                    width: 90px;
+                    
+                   
+                }
+                h2{
+                    font-size: 1.3em;
+                        
+                }
+               
+            }
+            &:nth-child(2),&:nth-child(3),&:nth-child(4){
+                    
+                @include taille_element(100%,20px,0);
+                display: flex;
+                p{
+                margin-top:0;
+                font-size: 14px ;
+                }
+                p:first-child{
+                    width: 390px;
+                    margin-left: 22px;
+                    
+                }
+                p:nth-child(2){
+                    width: 32px;
+                    text-align: right;
+                    
+                }
+            
+            }
+        }
+    }
+    #Menu_Bas{
+        display: flex;
+    }
+}
+
+/* Section régle menu 234 */
+.sectionp234
 {
     
-    flex-direction: column;
-    
-    > .sectionp1234_element
+    #Menu_Haut
     {
-        &:first-child{
-            margin: auto;
-            height: 10%;
-            margin-top: 0.4%;
+       
+        h1{
+            margin-top: 30px;
         }
-            h1
-            {
-                padding-top: 0.7%;
-                margin: 0;
-            }
+       
+    }
+    
+    .Menu_Milieu{    
       
+      .Milieu_element{
+            
+            
+            
+        &:first-child,&:nth-child(3),&:nth-child(4){
+            margin-top: -20px;
+           
+        }
+            
+
+                
+        }
+    } 
+    
+}      
+
+
+/* Section menu 1*/
+.sectionp1
+{
+    
+    
+    .sectionp1234_element{
+        &:nth-child(2){
+            background-color: #ffcdd2;
+        }
+    }
+    #Menu_Haut
+    {
+        
+     
+        h1{
+            margin-top: 3px;
+        }
+        .icone1{
+            font-size: 50px;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-image: -webkit-linear-gradient(right, #ef5350,#e57373);
+        }
+    }
+    .Menu_Milieu{    
+        .Milieu_element{
+                
+            &:first-child{
+                
+                
+                
+                .span1{
+                    margin-left: 34px;
+                }
+                .span2{
+                  margin-right: 34px;
+                }
+                .span1:before, .span2:after {
+                    
+                    
+                    border-bottom: 3px black solid;
+                   
+                }
+               
+            }
+            
+            &:nth-child(2),&:nth-child(3),&:nth-child(4),&:nth-child(5){
+                
+                @include taille_element(100%,20px,0);
+                display: flex;
+                
+                p{margin-top:0;
+                
+                font-size: 13px ;
+                }
+                p:first-child{
+                    width: 80%;
+                    margin-left: 32px;
+                    
+                 }
+                p:nth-child(2){
+                    width: 60px;
+                    text-align: right;
+                    margin-right: 35px;
+                }
+            }
+        }
+    }
+    #Menu_Bas{
+        .Bas_element{
+            &:first-child{
+                margin:auto 0 auto auto;
+                width: 50px;
+            }
+            &:nth-child(2){
+                margin:auto auto auto 0;
+            }
+            
+            .icone2{
+                font-size: 30px;
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-image: -webkit-linear-gradient(right, #ef5350,#e57373);
+            }
+        }
+    }
+}      
+
+
+/* Page menu 2*/
+#section2{
+    .sectionp1234_element{
+        &:nth-child(2){
+            background-color: #F3E5F5;
+        }
+    }
+    
+    #Menu_Haut{
+        h1{
+            @include dégradé_couleur( #FFB300, #6A1B9A, #6A1B9A);
+            
+        }
+    }
+    .Menu_Milieu{
+       
         &:nth-child(2)
         {
-             @include taille_element(380px,87%,0.4% auto 2% auto)
+            color : #FFB300;
+            .span1:before, .span2:after {
+                
+                border-bottom:#FFB300 solid;
+               
+            }
+            
         }
-      
-    }
-    
-}
-
-
-
-
-
-.conteneur_image1234{
-    @include taille_element(100%,100%,0%) ;
-    
-    .imgmenu1234
-    {
-        width: 100%;
-        height: 100%;
-
-        
-    }
-    #Entree ,#Dessert {
-        opacity: 0;
-        @include conteneur_soulignement(81%,25%);
-    }
-    #Plat {
-        opacity: 0;
-        @include conteneur_soulignement(81%,20%);
+        &:nth-child(3)
+        {
+            color : #6A1B9A;
+            .span1:before, .span2:after {
+                
+                border-bottom:#6A1B9A solid;
+            }
+            
         }
-
-    
-}
-
-
-/*Page de Menu 1 */
-
-
-#Entree .Entree__element-menu1
-{  
-    
-        
-    @include soulignement_img1234(18.6%,40%,20%) ;
-        
-    
-       
-}
-
-#Plat .Plat__element-menu1
-{              
-
+        &:nth-child(4)
+        {
+            color : #283593;
+            .span1:before, .span2:after {
+                
+                border-bottom:#283593 solid;
+            }
+            
+        }
+    }
    
-    @include soulignement_img1234 (25.3%,38%,23%) ;
-    
-    
-
 }
 
-#Dessert .Dessert__element-menu1
-{              
-
+/*Section menu 3*/
+#section3{
     
-        
-    @include soulignement_img1234 (25.3%,36%,27%) ;
-        
-    
-
+    .sectionp1234_element{
+        &:nth-child(2){
+            background-color: #E0E0E0;
+        }
+    }
+    #Menu_Haut{
+        h1{
+            @include dégradé_couleur(  #3949AB , #1E88E5, #039BE5);
+        }
+    }
+    .Menu_Milieu{
+       
+        &:nth-child(2)
+        {
+            .span1:before, .span2:after {
+                
+                border-bottom:#3949AB solid;
+               
+            }
+            
+        }
+        &:nth-child(3)
+        {
+            .span1:before, .span2:after {
+                
+                border-bottom:#1E88E5 solid;
+            }
+            
+        }
+        &:nth-child(4)
+        {
+            
+            .span1:before, .span2:after {
+                
+                border-bottom:#039BE5 solid;
+            }
+        }
+    }
 }
 
-/*Page de Menu 2 */
+/*Section menu 4*/
+#section4{
+    .sectionp1234_element{
+        &:nth-child(2){
+            background-color: #E0E0E0;
+        }
+    }
+     #Menu_Haut{
+        h1{
+            @include dégradé_couleur(  #4CAF50 , #66BB6A ,#8BC34A);
+           
+        }
+    }
+    .Menu_Milieu{
+       .span1:before, .span2:after {
+            background: linear-gradient(to right, #4CAF50 , #66BB6A ,#8BC34A);
+            height: 2px;
+        }
+    }
+   
+}
 
-#Entree .Entree__element-menu2
-{  
+
+
+
+/* Traits deux cotés d'un titre */
+.span1,.span2{
+    margin-top: auto;
+    margin-bottom: auto;
+   
+  }  
+  .span1{
+      margin-left: 22px;
+  }
+  .span2{
+    margin-right: 22px;
+}
+
+
+  
+  .span1:before, .span2:after {
+   
+    content:'';
+    width:3em;
+    display:inline-block;
+    vertical-align:middle;
     
-        
-    @include soulignement_img1234(27.8%,31.5%,36%) ;
+    
+  }
+  
+  
+  
+  /*Soulignement*/
+  h2{
+                      
+     
+      text-decoration: none;
+      margin-top: auto;
+      margin-bottom: auto;
+  }
+  h2::after{
+      content: '';
+      display: block;
+      width: 0;
+      height: 2.2px;
+      background: #000;
+      transition: width .3s;
+  }
+  
+  .Menu_Milieu:hover h2::after{
+  
       
-    
-       
-}
-
-#Plat .Plat__element-menu2
-{              
-
-    @include soulignement_img1234 (19.5%,36.5%,27%) ;
+      width: 100%;
+      
+      
+  }
      
-}
-
-#Dessert .Dessert__element-menu2
-{              
-
-    @include soulignement_img1234 (24.2%,34%,31%) ;
-       
-}
-
-/*Page de Menu 3 */
-
-#Entree .Entree__element-menu3
-{  
-    
-    @include soulignement_img1234(31%,35.5%,29%) ;
-       
-    
-       
-}
-
-#Plat .Plat__element-menu3
-{              
-
-    @include soulignement_img1234 (14.5%,34.5%,30%) ;
-     
-}
-
-#Dessert .Dessert__element-menu3
-{              
-
-    @include soulignement_img1234 (10.5%,38%,25%) ;
-       
-}
-
-/*Page de Menu 4 */
-
-#Entree .Entree__element-menu4
-{  
-
-    @include soulignement_img1234(29.8%,43.5%,12%) ;
-       
-}
-
-#Plat .Plat__element-menu4
-{              
-
-    @include soulignement_img1234 (14.5%,39.5%,22%) ;
-     
-}
-
-#Dessert .Dessert__element-menu4
-{              
-
-    @include soulignement_img1234 (10.5%,38%,25%) ;
-       
-}
-
-
-
-
-/* Declencheur */
-
-
-#Entree:hover,#Plat:hover,#Dessert:hover
-{
-    opacity: 1;
-}

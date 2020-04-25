@@ -2,15 +2,18 @@ footer{
    
     display: flex;
     justify-content: space-between;
-
-    position: absolute;
+    position: sticky;
     bottom: 0;
+    
+	
 
     background-color: $couleur_background;
     @include taille_element(100%,65px,0);
 
     >.footer__element
     {   
+        margin-top: auto;
+        margin-bottom: auto;
         text-decoration: none;
         h2{
             @include typographie(1.5em,$couleur_cliquable);
@@ -27,6 +30,8 @@ footer{
             margin-right: 4%;
             
         }
+            
+        
 
         .footer__element-vibration
             {
@@ -53,6 +58,5 @@ footer{
     }
 
 }
-
 
 

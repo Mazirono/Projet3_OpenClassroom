@@ -12,27 +12,12 @@
     height: $heigth;
     margin: $margin;
 }
-/*
-@mixin 
-*/
-@mixin conteneur_soulignement($top,$height)
-{
-    
-    position: relative;
-    bottom: $top;
-    width: 100%;
-    height: $height;
-    
-   
-}
 
-@mixin soulignement_img1234($top,$left,$width)
+@mixin dégradé_couleur($couleur1,$couleur2,$couleur3)
 {
-    border-bottom: 1.6px black solid;
-    width:$width ;
-    position: relative;
-    top: $top;
-    left: $left;
-    
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: -webkit-linear-gradient(left,$couleur1,$couleur2,$couleur3);
 }
 
