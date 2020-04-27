@@ -1,4 +1,4 @@
-
+/* Esthétique */
 .sectionpindex
 {
     
@@ -7,7 +7,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-content: center;
-   
+    
     .sectionpindex__element
     {
         
@@ -41,22 +41,8 @@
                 width: 100%;
             }
     } 
-    #btn_prochain{
-        text-align: center;
-    }
-    
 
-    label {
     
-        padding: 1.5vh 2%;
-        border-radius: 0.5rem;
-        
-        
-        background-color: $couleur_background;
-        span{
-            @include typographie(1.8em,$couleur_cliquable);
-        }
-    }         
        
 }
 
@@ -64,6 +50,7 @@
     
 
 
+/* Zoom sur les images*/
 
 
 .sectionpindex__imgs4menus-zoom {
@@ -85,17 +72,52 @@
         opacity: 100%;
         
     }
+}
+    
+    
+
+
+/* Bouton prochainement et 3 petits points */
+
+#btn_prochain{
+    text-align: center;
+}
+input{
+    visibility: hidden;
+}
+
+
+label {
+
+    padding: 1.5vh 2%;
+    border-radius: 0.5rem;
+    
+    
+    background-color: $couleur_background;
+    span{
+        @include typographie(1.8em,$couleur_cliquable);
     }
-    
-    
-
-
-
-
-
-
+}  
+#toggle:checked 
+{
+    ~ div#deplacement_points .point
+    {
+        
+        
+        bottom: 20px;
+        left: 6px;
+        opacity: 1;
+        
+    }
+    ~ label span
+    {
+        
+        opacity: 0;
+    }
+}
 div#deplacement_points {
-
+     
+         
     .point {
         
         display: inline-block;
@@ -129,20 +151,4 @@ div#deplacement_points {
 
 
 
-#toggle:checked 
-{
-    ~ div#deplacement_points .point
-    {
-        
-        
-        bottom: 20px;
-        left: 6px;
-        opacity: 1;
-        
-    }
-    ~ label span
-    {
-        
-        opacity: 0;
-    }
-}
+

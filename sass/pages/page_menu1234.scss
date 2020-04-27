@@ -117,7 +117,7 @@
     
     .sectionp1234_element{
         &:nth-child(2){
-            background-color: #ffcdd2;
+            background-color: $couleur_fondmenu1;
         }
     }
     #Menu_Haut
@@ -146,7 +146,7 @@
                     margin-left: 34px;
                 }
                 .span2{
-                  margin-right: 34px;
+                    margin-right: 34px;
                 }
                 .span1:before, .span2:after {
                     
@@ -162,9 +162,9 @@
                 @include taille_element(100%,20px,0);
                 display: flex;
                 
-                p{margin-top:0;
-                
-                font-size: 13px ;
+                p{
+                    margin-top:0;
+                    font-size: 13px ;
                 }
                 p:first-child{
                     width: 80%;
@@ -325,10 +325,10 @@
   }  
   .span1{
       margin-left: 22px;
-  }
+    }
   .span2{
     margin-right: 22px;
-}
+    }
 
 
   

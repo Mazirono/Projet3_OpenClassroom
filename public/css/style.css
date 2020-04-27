@@ -31,10 +31,6 @@ header h1 {
   margin: auto;
 }
 
-section input {
-  visibility: hidden;
-}
-
 footer {
   display: flex;
   justify-content: space-between;
@@ -101,6 +97,7 @@ footer > .footer__element .footer__element-vibration:hover {
   }
 }
 
+/* Esthétique */
 .sectionpindex {
   width: 460px;
   height: 550px;
@@ -132,19 +129,8 @@ footer > .footer__element .footer__element-vibration:hover {
   align-self: flex-end;
   width: 100%;
 }
-.sectionpindex #btn_prochain {
-  text-align: center;
-}
-.sectionpindex label {
-  padding: 1.5vh 2%;
-  border-radius: 0.5rem;
-  background-color: #29602A;
-}
-.sectionpindex label span {
-  color: #FFBF33;
-  font-size: 1.8em;
-}
 
+/* Zoom sur les images*/
 .sectionpindex__imgs4menus-zoom {
   overflow: hidden;
 }
@@ -158,6 +144,34 @@ footer > .footer__element .footer__element-vibration:hover {
 .sectionpindex__imgs4menus-zoom:hover img {
   transform: scale(1.42);
   opacity: 100%;
+}
+
+/* Bouton prochainement et 3 petits points */
+#btn_prochain {
+  text-align: center;
+}
+
+input {
+  visibility: hidden;
+}
+
+label {
+  padding: 1.5vh 2%;
+  border-radius: 0.5rem;
+  background-color: #29602A;
+}
+label span {
+  color: #FFBF33;
+  font-size: 1.8em;
+}
+
+#toggle:checked ~ div#deplacement_points .point {
+  bottom: 20px;
+  left: 6px;
+  opacity: 1;
+}
+#toggle:checked ~ label span {
+  opacity: 0;
 }
 
 div#deplacement_points .point {
@@ -183,15 +197,6 @@ div#deplacement_points .point:nth-child(3) {
   30% {
     transform: translateY(-15px);
   }
-}
-
-#toggle:checked ~ div#deplacement_points .point {
-  bottom: 20px;
-  left: 6px;
-  opacity: 1;
-}
-#toggle:checked ~ label span {
-  opacity: 0;
 }
 
 /* Section régle menu 1234 */
@@ -426,6 +431,10 @@ h2::after {
   width: 100%;
 }
 
+#section_mention {
+  height: 80%;
+}
+
 header {
   /*Tablette*/
 }
@@ -566,11 +575,9 @@ img {
     font-size: 0.91em;
   }
   .sectionp1234 .sectionp1234_element:nth-child(2) {
-    height: 87%;
     width: 85%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 2%;
+    height: 87%;
+    margin: 2px auto 0 auto;
   }
   .sectionp1234 .sectionp1234_element #Menu_Haut {
     height: 14%;
@@ -651,11 +658,9 @@ img {
     font-size: 2.6em;
   }
   .sectionp1234 .sectionp1234_element:nth-child(2) {
-    height: 82%;
     width: 72%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 0px;
+    height: 82%;
+    margin: 0px auto 0 auto;
   }
   .sectionp1234 .sectionp1234_element #Menu_Haut {
     height: 15%;
