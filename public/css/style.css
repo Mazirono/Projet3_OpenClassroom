@@ -632,6 +632,7 @@ img {
   #sectionp1 .sectionp1234_element #Menu_Bas {
     background-color: #ffcdd2;
     height: 20%;
+    margin-top: -8px;
   }
   #sectionp1 .sectionp1234_element #Menu_Bas .Bas_Element {
     margin-top: 5%;

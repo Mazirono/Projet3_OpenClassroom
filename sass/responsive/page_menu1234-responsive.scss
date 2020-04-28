@@ -89,6 +89,7 @@
         #Menu_Bas{
             background-color: $couleur_fondmenu1;
             height: 20%;
+            margin-top: -8px;
             .Bas_Element{
                 margin-top: 5%;
             }
@@ -178,25 +179,25 @@
     
   
 }
-#sectionp1
+    #sectionp1
     {
-    .sectionp1234_element{
-        .Menu_Milieu{
-            background-color: $couleur_fondmenu1;
-            &:nth-child(3)
-            {
-                margin-top: 12%;
+        .sectionp1234_element{
+            .Menu_Milieu{
+                background-color: $couleur_fondmenu1;
+                &:nth-child(3)
+                {
+                    margin-top: 12%;
+                }
             }
-        }
-     
-        #Menu_Bas{
-            background-color: $couleur_fondmenu1;
-           
-        }
         
-          
+            #Menu_Bas{
+                
+                background-color: $couleur_fondmenu1;
+            
+            }
+            
+            
+        }
+            
     }
-        
-    }
-
 }
