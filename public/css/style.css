@@ -34,7 +34,7 @@ header h1 {
 footer {
   display: flex;
   justify-content: space-between;
-  position: sticky;
+  position: fixed;
   bottom: 0;
   background-color: #29602A;
   width: 100%;
@@ -456,6 +456,7 @@ footer {
 }
 @media (max-device-width: 1024px) {
   footer {
+    position: sticky;
     width: 100%;
     height: 10%;
     margin: 200px 0 0 0;
