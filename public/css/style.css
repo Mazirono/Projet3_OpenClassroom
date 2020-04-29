@@ -278,7 +278,6 @@ div#deplacement_points .point:nth-child(3) {
 }
 .sectionp1 #Menu_Haut .icone1 {
   font-size: 50px;
-  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-image: -webkit-linear-gradient(right, #ef5350, #e57373);
@@ -320,7 +319,6 @@ div#deplacement_points .point:nth-child(3) {
 }
 .sectionp1 #Menu_Bas .Bas_element .icone2 {
   font-size: 30px;
-  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-image: -webkit-linear-gradient(right, #ef5350, #e57373);
@@ -331,7 +329,6 @@ div#deplacement_points .point:nth-child(3) {
   background-color: #F3E5F5;
 }
 #section2 #Menu_Haut h1 {
-  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-image: -webkit-linear-gradient(left, #FFB300, #6A1B9A, #6A1B9A);
@@ -360,7 +357,6 @@ div#deplacement_points .point:nth-child(3) {
   background-color: #E0E0E0;
 }
 #section3 #Menu_Haut h1 {
-  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-image: -webkit-linear-gradient(left, #3949AB, #1E88E5, #039BE5);
@@ -380,7 +376,6 @@ div#deplacement_points .point:nth-child(3) {
   background-color: #E0E0E0;
 }
 #section4 #Menu_Haut h1 {
-  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-image: -webkit-linear-gradient(left, #4CAF50, #66BB6A, #8BC34A);
