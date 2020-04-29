@@ -1,5 +1,5 @@
 /*Tablettes*/
-@media (max-device-width: 1024px) {
+@media only screen and (max-width: 1024px) {
 footer
 {
     
@@ -22,7 +22,7 @@ footer
 }
 
 /*Portable*/
-@media (max-device-width: 600px) {
+@media only screen and (max-width: 600px) {
     footer{
         .footer__element{
             h2{
@@ -34,7 +34,7 @@ footer
 }
 
 /*Tablette*/
-@media (min-device-width: 600px) and (max-device-width: 1024px) {
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
     footer{
         .footer__element{
             h2{
