@@ -1,7 +1,7 @@
 
 
 /* Portables */
-@media (max-device-width: 600px){
+@media only screen and (max-width: 600px){
 .sectionp1234{
     
         @include taille_element(100%,80.8%,0% 0% 0% 0%);
@@ -106,7 +106,7 @@
 
 
 /* Tablette */
- @media  screen and (min-device-width: 600px) and (max-device-width: 1024px){
+ @media only screen and (min-width: 600px) and (max-width: 1024px){
 .sectionp1234{
    
         @include taille_element(100%,79%,0% 0% 0% 0%);
