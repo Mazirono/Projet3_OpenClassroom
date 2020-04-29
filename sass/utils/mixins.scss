@@ -15,7 +15,7 @@
 
 @mixin dégradé_couleur($couleur1,$couleur2,$couleur3)
 {
-    background-clip: text;
+    
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-image: -webkit-linear-gradient(left,$couleur1,$couleur2,$couleur3);
