@@ -1,12 +1,14 @@
+@media (max-device-width: 1024px){
 header{
 
-    @media (max-device-width: 1024px){
+    
         @include taille_element(100%,11%,0);
     }
+}
     
     /*Tablette*/
-    @media (min-device-width: 600px) and (max-device-width: 1024px){
-    
+@media (min-device-width: 600px) and (max-device-width: 1024px){
+    header{
         h1{
             font-size: 3.3em;
         }

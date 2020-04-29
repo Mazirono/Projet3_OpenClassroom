@@ -435,9 +435,6 @@ h2::after {
   height: 80%;
 }
 
-header {
-  /*Tablette*/
-}
 @media (max-device-width: 1024px) {
   header {
     width: 100%;
@@ -445,15 +442,13 @@ header {
     margin: 0;
   }
 }
+/*Tablette*/
 @media (min-device-width: 600px) and (max-device-width: 1024px) {
   header h1 {
     font-size: 3.3em;
   }
 }
-
-footer {
-  /*Tablettes et portables*/
-}
+/*Tablettes*/
 @media (max-device-width: 1024px) {
   footer {
     position: sticky;
@@ -461,12 +456,6 @@ footer {
     height: 10%;
     margin: 200px 0 0 0;
   }
-}
-footer .footer__element {
-  /*Portable*/
-  /*Tablette*/
-}
-@media (max-device-width: 1024px) {
   footer .footer__element:first-child {
     margin: auto 0 auto 2%;
   }
@@ -474,19 +463,20 @@ footer .footer__element {
     margin: auto 2% auto 0%;
   }
 }
+/*Portable*/
 @media (max-device-width: 600px) {
   footer .footer__element h2 {
     color: #FFBF33;
     font-size: 1.3em;
   }
 }
+/*Tablette*/
 @media (min-device-width: 600px) and (max-device-width: 1024px) {
   footer .footer__element h2 {
     color: #FFBF33;
     font-size: 2.4em;
   }
 }
-
 .sectionpindex {
   /*Portable*/
 }

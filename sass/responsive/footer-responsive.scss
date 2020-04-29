@@ -1,47 +1,47 @@
+/*Tablettes*/
+@media (max-device-width: 1024px) {
 footer
 {
-    /*Tablettes et portables*/
     
-    @media (max-device-width: 1024px) {
-        position: sticky;
-        
-        @include taille_element(100%,10%,200px 0 0 0);
-        
-    
-    }
-    
-
+    position: sticky;
+    @include taille_element(100%,10%,200px 0 0 0);
     .footer__element
     {  
-        
-   
-        @media (max-device-width: 1024px) {
-            
-            &:first-child{
-                margin: auto 0 auto 2%;
+         &:first-child{
+            margin: auto 0 auto 2%;
                 
-            }       
-            &:nth-child(2)
-                {
-                margin: auto 2% auto 0%;
+        }       
+         &:nth-child(2)
+            {
+            margin: auto 2% auto 0%;
                     
-                }
-        }
+             }
+       
+    }
+}
+}
 
-    /*Portable*/
-        @media (max-device-width: 600px) {
+/*Portable*/
+@media (max-device-width: 600px) {
+    footer{
+        .footer__element{
             h2{
                 @include typographie(1.3em,$couleur_cliquable);
             }
-            
         }
+            
+    }
+}
 
-    /*Tablette*/
-        @media (min-device-width: 600px) and (max-device-width: 1024px) {
+/*Tablette*/
+@media (min-device-width: 600px) and (max-device-width: 1024px) {
+    footer{
+        .footer__element{
             h2{
                 @include typographie(2.4em,$couleur_cliquable);
             }
         }
-    }
-
+        }
 }
+
+
